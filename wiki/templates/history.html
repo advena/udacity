@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>History Page</title>
+    </head>
+    <body>
+     <div class='header'>
+      <div class='menu'>{{edit}} | history </div>
+      <div class='log_area'>{{username}} {{login}} {{logout}}</div>
+     </div>
+     <div class='content'> {% for page in history%} 
+     <ul>
+        <li>{{page.created}} | {{page.content[:15]}}   view {{edit}}</li>
+     </ul>
+     {% endfor %}
+     </div>
+    </body>
+</html>
+
